@@ -77,6 +77,7 @@ app.use(cors());
 // Routes
 app.use(require("./src/routes/login.routes"));
 app.use("/usuarios/", require("./src/routes/usuarios.routes"));
+app.use("/historiaClinica/", require("./src/routes/historiaClinica.routes"));
 
 app.use(notFound);
 app.use(Sentry.Handlers.errorHandler());
