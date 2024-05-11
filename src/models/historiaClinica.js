@@ -161,6 +161,7 @@ const historiaClinica = new Schema({
         planTratamiento: { type: String },
     },
     procedimientos: { type: Array, default: [] },
+    odontograma: { type: String },
     estado: { type: String },
 }, {
     timestamps: true
