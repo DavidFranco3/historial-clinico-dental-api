@@ -58,10 +58,10 @@ router.put("/deshabilitar/:id", async (req, res) => {
 // Actualizar datos de la orden de trabajo
 router.put("/actualizar/:id", async (req, res) => {
     const { id } = req.params;
-    const { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos } = req.body;
+    const { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos, odontograma, odontogramaFinal } = req.body;
 
     await historiaClinica
-        .updateOne({ _id: id }, { $set: { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos } })
+        .updateOne({ _id: id }, { $set: { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos, odontograma, odontogramaFinal } })
         .then((data) => res.status(200).json({ mensaje: "Datos de la historia actualizados" }))
         .catch((error) => res.json({ message: error }));
 });
