@@ -96,12 +96,30 @@ const historiaClinica = new Schema({
         },
     },
     antecedentesPersonalesNoPatologicos: {
-        alimentacion: { type: String },
-        higiene: { type: String },
-        convivenciaConAnimales: { type: String },
-        tatuajes: { type: String },
-        deportes: { type: String },
-        vacunas: { type: String }
+        alimentacion: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
+        higiene: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
+        convivenciaConAnimales: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
+        tatuajes: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
+        deportes: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
+        vacunas: {
+            estado: { type: String},
+            descripcion: { type: String }
+        },
     },
     signosVitales: {
         TA: { type: String },
