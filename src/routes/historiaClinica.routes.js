@@ -58,7 +58,7 @@ router.put("/deshabilitar/:id", async (req, res) => {
 // Actualizar datos de la orden de trabajo
 router.put("/actualizar/:id", async (req, res) => {
     const { id } = req.params;
-    const { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos, odontograma, odontogramaFinal } = req.body;
+    const { datosPaciente, interrogatorio, antecedentesHeredofamiliares, antecedentesPersonalesPatologicos, antecedentesPersonalesNoPatologicos, signosVitales, estudios, cavidadBucal, procedimientos, odontograma, odontogramaFinal, cartaResponsiva } = req.body;
 
     await historiaClinica
         .updateOne({ _id: id }, { $set: { 
